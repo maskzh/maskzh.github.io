@@ -7,29 +7,10 @@ module.exports = (options) => {
       author: `maskzh`,
     },
     plugins: [
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: contentPath || `articles`,
-          path: contentPath || path.resolve(__dirname + `/articles/`),
-        },
-      },
-      `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
+      `gatsby-plugin-react-helmet`,
       `gatsby-plugin-postcss`,
       `gatsby-plugin-sharp`,
-      {
-        resolve: `gatsby-plugin-manifest`,
-        options: {
-          name: `gatsby-theme-maskzh`,
-          short_name: `maskzh`,
-          start_url: `/`,
-          background_color: `#663399`,
-          theme_color: `#663399`,
-          display: `minimal-ui`,
-          icon: require.resolve(`./logo.png`), // This path is relative to the root of the site.
-        },
-      },
       {
         resolve: `gatsby-transformer-remark`,
         options: {
@@ -44,9 +25,17 @@ module.exports = (options) => {
               resolve: `gatsby-remark-images`,
               options: {
                 maxWidth: 800,
+                ignoreFileExtensions: [],
               },
             },
           ],
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: contentPath || `articles`,
+          path: contentPath || path.resolve(__dirname + `/articles/`),
         },
       },
       {
@@ -59,6 +48,18 @@ module.exports = (options) => {
             keySeparator: false,
             nsSeparator: false,
           },
+        },
+      },
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: `gatsby-theme-maskzh`,
+          short_name: `maskzh`,
+          start_url: `/`,
+          background_color: `#663399`,
+          theme_color: `#663399`,
+          display: `minimal-ui`,
+          icon: require.resolve(`./logo.png`), // This path is relative to the root of the site.
         },
       },
       // this (optional) plugin enables Progressive Web App + Offline functionality

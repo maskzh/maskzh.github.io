@@ -8,13 +8,13 @@ import SEO from '../components/seo';
 import PostContext from '../context/PostContext';
 import { isTagInclude } from '../utils/Tag';
 
-export default function BlogPost({ path, data: { site, markdownRemark } }) {
+export default function BlogPost({ pathContext: { slug }, data: { site, markdownRemark } }) {
   const { posts } = useContext(PostContext);
   const location = useLocation();
   const tag = queryString.parse(location.search).tag;
   const articles = posts
     .filter((article) => isTagInclude(article.tags, tag as string))
-    .filter((article) => article.slug !== path)
+    .filter((article) => article.slug !== slug)
     .sort((a, b) => dayjs(b.date).unix() - dayjs(a.date).unix())
     .slice(0, 3);
 
@@ -23,7 +23,6 @@ export default function BlogPost({ path, data: { site, markdownRemark } }) {
       <Link to="/" className="block py-2 shadow text-lg font-bold text-center">
         {site.siteMetadata.title}
       </Link>
-      {console.log(markdownRemark)}
       <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
         <SEO title={markdownRemark.frontmatter.title} />
         <Article markdownRemark={markdownRemark} />
