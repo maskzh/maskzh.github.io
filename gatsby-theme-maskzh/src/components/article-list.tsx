@@ -6,8 +6,10 @@ export default function ArticleList({ articles }) {
   const [text, setText] = useState('');
 
   return (
-    <div className="">
-      <Search text={text} setText={setText} />
+    <div>
+      <div className="p-4">
+        <Search text={text} setText={setText} />
+      </div>
       {articles
         .filter(({ title, content }) => matchText([title, content], text))
         .map(({ title, date, content, slug }) => (

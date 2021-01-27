@@ -19,19 +19,21 @@ export default function BlogPost({ pathContext: { slug }, data: { site, markdown
     .slice(0, 3);
 
   return (
-    <div>
-      <Link to="/" className="block py-2 shadow text-lg font-bold text-center">
+    <div className="min-h-screen dark:bg-black">
+      <Link to="/" className="block py-2 shadow text-lg font-bold text-center dark:text-white">
         {site.siteMetadata.title}
       </Link>
       <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
         <SEO title={markdownRemark.frontmatter.title} />
         <Article markdownRemark={markdownRemark} />
-        {articles.length > 0 && <h3 className="text-base font-medium">延伸阅读</h3>}
+        {articles.length > 0 && <h3 className="text-base font-medium dark:text-white">延伸阅读</h3>}
         {articles.map(({ title, date, content, slug }) => (
-          <Link key={slug} to={slug} className="block py-4 border-b">
-            <time className="text-gray-400 text-xs font-medium">{dayjs(date).format('YYYY-MM-DD')}</time>
-            <h3 className="text-base text-black font-bold truncate">{title}</h3>
-            <p className="mt-1 text-sm text-gray-800">{content}</p>
+          <Link key={slug} to={slug} className="block py-4 border-b border-gray-100 dark:border-gray-900">
+            <time className="text-gray-400 text-xs font-medium dark:text-gray-600">
+              {dayjs(date).format('YYYY-MM-DD')}
+            </time>
+            <h3 className="text-base text-black font-bold truncate dark:text-white">{title}</h3>
+            <p className="mt-1 text-sm text-gray-800 dark:text-gray-200">{content}</p>
           </Link>
         ))}
       </div>

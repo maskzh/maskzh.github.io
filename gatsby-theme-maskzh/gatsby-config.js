@@ -7,6 +7,7 @@ module.exports = (options) => {
       author: `maskzh`,
     },
     plugins: [
+      `gatsby-plugin-dark-mode`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-postcss`,

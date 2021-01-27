@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './github-markdown.css';
+@import './github-markdown-dark.css';
+@import './prism-tomorrow.css';
+
+input,
+textarea {
+  font-size: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+}
+
+.placeholder-center::placeholder {
+  text-align: center;
+}

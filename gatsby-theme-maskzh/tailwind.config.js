@@ -1,12 +1,8 @@
 module.exports = {
   purge: false,
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
-    extend: {
-      colors: {
-        primary: '#25B8A6',
-      },
-    },
+    extend: {},
   },
   variants: {
     extend: {},
