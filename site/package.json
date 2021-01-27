@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "start": "npm run develop",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d public"
+  },
+  "dependencies": {
+    "gatsby": "^2.31.1",
+    "gatsby-theme-maskzh": "0.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "prettier": "2.2.1"
+  },
+  "homepage": "https://zyc.life"
+}

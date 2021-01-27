@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "private": true,
+  "license": "MIT",
+  "version": "0.1.0",
+  "scripts": {
+    "develop": "yarn workspace site develop",
+    "build": "yarn workspace site build",
+    "clean": "yarn workspace site clean",
+    "serve": "yarn workspace site serve",
+    "deploy": "yarn workspace site deploy"
+  },
+  "workspaces": [
+    "gatsby-theme-maskzh",
+    "site"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maskzh/blog.git"
+  }
+}

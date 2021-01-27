@@ -1,0 +1,238 @@
+.markdown-body.dark h1 .octicon-link,
+.markdown-body.dark h2 .octicon-link,
+.markdown-body.dark h3 .octicon-link,
+.markdown-body.dark h4 .octicon-link,
+.markdown-body.dark h5 .octicon-link,
+.markdown-body.dark h6 .octicon-link {
+  color: #1b1f23;
+}
+
+.markdown-body.dark {
+  color: #eee;
+}
+.markdown-body.dark a {
+  color: #3794ff;
+}
+.markdown-body.dark kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+
+.markdown-body.dark :checked+.radio-label {
+  border-color: #0366d6;
+}
+
+.markdown-body.dark .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body.dark .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body.dark .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body.dark .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body.dark .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body.dark .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body.dark .pl-c1,
+.markdown-body.dark .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body.dark .pl-e,
+.markdown-body.dark .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body.dark .pl-s .pl-s1,
+.markdown-body.dark .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body.dark .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body.dark .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body.dark .pl-pds,
+.markdown-body.dark .pl-s,
+.markdown-body.dark .pl-s .pl-pse .pl-s1,
+.markdown-body.dark .pl-sr,
+.markdown-body.dark .pl-sr .pl-cce,
+.markdown-body.dark .pl-sr .pl-sra,
+.markdown-body.dark .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body.dark .pl-smw,
+.markdown-body.dark .pl-v {
+  color: #e36209;
+}
+
+.markdown-body.dark .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body.dark .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body.dark .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body.dark .pl-sr .pl-cce {
+  color: #22863a;
+}
+
+.markdown-body.dark .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body.dark .pl-mh,
+.markdown-body.dark .pl-mh .pl-en,
+.markdown-body.dark .pl-ms {
+  color: #005cc5;
+}
+
+.markdown-body.dark .pl-mi {
+  color: #24292e;
+}
+
+.markdown-body.dark .pl-mb {
+  color: #24292e;
+}
+
+.markdown-body.dark .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body.dark .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body.dark .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body.dark .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body.dark .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body.dark .pl-ba {
+  color: #586069;
+}
+
+.markdown-body.dark .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body.dark .pl-corl {
+  color: #032f62;
+}
+
+.markdown-body.dark hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body.dark kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body.dark hr {
+  background-color: #e1e4e8;
+}
+
+.markdown-body.dark blockquote {
+  color: #eee;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body.dark h1,
+.markdown-body.dark h2 {
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body.dark h6 {
+  color: #eee;
+}
+
+.markdown-body.dark table td,
+.markdown-body.dark table th {
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body.dark table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body.dark table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body.dark img {
+  background-color: #fff;
+}
+
+.markdown-body.dark code {
+  background-color: rgba(27,31,35,.05);
+}
+
+.markdown-body.dark .commit-tease-sha {
+  color: #444d56;
+}
+
+.markdown-body.dark .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body.dark .blob-num {
+  color: rgba(27,31,35,.3);
+}
+
+.markdown-body.dark .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body.dark .blob-code-inner {
+  color: #24292e;
+}
+
+.markdown-body.dark .pl-token.active,
+.markdown-body.dark .pl-token:hover {
+  background: #ffea7f;
+}
