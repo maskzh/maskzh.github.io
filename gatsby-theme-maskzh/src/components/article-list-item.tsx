@@ -21,7 +21,7 @@ export default function ArticleListItem({ title, date, content, slug, matchText 
         <h3 className="text-base text-black font-bold truncate dark:text-white">
           {HighlightText({ text: title, pattern: matchText })}
         </h3>
-        <div className="mt-1 text-sm text-gray-800 dark:text-gray-200">
+        <div className="mt-1 text-sm text-gray-800 text-justify dark:text-gray-200">
           {HighlightText({ text: content, pattern: matchText })}
         </div>
       </article>

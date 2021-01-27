@@ -19,7 +19,7 @@ location / {
 }
 ```
 
-这段就是配置前端文件放置的目录以及 index 对应的文件。如果你的项目是单页应用且使用 `Browser History`作为路由（例如：https://example.com/route1），那就需要加上`try_files $uri $uri/ /index.html;`这段，它会将访问的地址始终指向根目录下的`index.html`。
+这段就是配置前端文件放置的目录以及 index 对应的文件。如果你的项目是单页应用且使用 `Browser History`作为路由（例如：`https://example.com/route1`），那就需要加上`try_files $uri $uri/ /index.html;`这段，它会将访问的地址始终指向根目录下的`index.html`。
 
 ### 代理接口 API
 

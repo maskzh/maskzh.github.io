@@ -5,6 +5,7 @@ module.exports = {
     title: "ZYC's Blog",
     description: '郑洋葱的博客',
     author: 'maskzh',
+    siteUrl: 'https://zyc.life',
   },
   plugins: [
     {

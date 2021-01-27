@@ -1,6 +1,4 @@
 import { navigate } from '@reach/router';
-import classnames from 'classnames';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import React from 'react';
 
 export default function Article({ markdownRemark }) {
@@ -16,7 +14,7 @@ export default function Article({ markdownRemark }) {
   return (
     <article className="py-8">
       <header className="mb-8">
-        <h1 className="mb-4 text-3xl font-bold dark:text-white">{title}</h1>
+        <h1 className="mb-4 text-2xl font-bold dark:text-white">{title}</h1>
         {tags && (
           <div className="-mx-1">
             {tags.map((tag: string) => (
@@ -31,14 +29,7 @@ export default function Article({ markdownRemark }) {
           </div>
         )}
       </header>
-      <ThemeToggler>
-        {({ theme }) => (
-          <div
-            className={classnames('markdown-body', theme)}
-            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-          ></div>
-        )}
-      </ThemeToggler>
+      <div className="markdown-body" dangerouslySetInnerHTML={{ __html: markdownRemark.html }}></div>
     </article>
   );
 }

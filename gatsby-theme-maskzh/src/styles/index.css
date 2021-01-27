@@ -6,9 +6,12 @@
 @import './github-markdown-dark.css';
 @import './prism-tomorrow.css';
 
+body.dark {
+  background-color: black;
+}
+
 input,
 textarea {
-  font-size: inherit;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -23,4 +26,8 @@ textarea {
 
 .placeholder-center::placeholder {
   text-align: center;
+}
+
+.text-justify::after {
+  content: ' ';
 }

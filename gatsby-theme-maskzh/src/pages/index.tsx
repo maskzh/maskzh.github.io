@@ -16,7 +16,7 @@ export default function IndexPage({ data: { site } }) {
   const { posts, tags } = useContext(PostContext);
   const tag = queryString.parse(location.search).tag;
   const articles = posts
-    .filter((file) => isTagInclude(file.tags, tag as string))
+    .filter((post) => isTagInclude(post.tags, tag as string))
     .sort((a, b) => dayjs(b.date).unix() - dayjs(a.date).unix());
 
   return (
@@ -36,7 +36,7 @@ export default function IndexPage({ data: { site } }) {
           </p>
         </footer>
       </aside>
-      <main className="flex-1 min-h-screen">
+      <main className="flex-1 min-h-screen overflow-x-hidden">
         <Link to="/" className="block py-2 shadow text-lg font-bold text-center sm:hidden dark:text-white">
           {site.siteMetadata.title}
         </Link>
