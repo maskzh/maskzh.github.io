@@ -19,26 +19,27 @@ export default function BlogPost({ pathContext: { slug }, data: { site, markdown
 
   return (
     <div className="min-h-screen overflow-x-hidden dark:bg-black">
-      <Link to="/" className="block py-2 shadow text-lg font-bold text-center dark:text-white">
+      <Link to="/" className="block py-2 text-lg font-bold text-center dark:text-white">
         {site.siteMetadata.title}
       </Link>
-      <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
+      <div className="px-6 pb-6 mx-auto" style={{ maxWidth: 800 }}>
         <SEO title={markdownRemark.frontmatter.title} />
         <Article markdownRemark={markdownRemark} />
         {articles.length > 0 && (
-          <h3 className="pt-6 text-base font-medium border-t border-gray-100 dark:text-white dark:border-gray-900">
+          <h3 className="mt-6 text-sm font-medium dark:text-white">
             延伸阅读
           </h3>
         )}
-        {articles.map(({ title, date, content, slug }) => (
-          <Link key={slug} to={slug} className="block py-4 border-b border-gray-100 dark:border-gray-900">
-            <time className="text-gray-400 text-xs font-medium dark:text-gray-600">
-              {dayjs(date).format('YYYY-MM-DD')}
-            </time>
-            <h3 className="text-base text-black font-bold truncate dark:text-white">{title}</h3>
-            <p className="mt-1 text-sm text-gray-800 text-justify dark:text-gray-200">{content}</p>
-          </Link>
-        ))}
+        <div className="divide-y divide-gray-100 dark:divide-gray-900">
+          {articles.map(({ title, date, slug }) => (
+            <Link key={slug} to={slug} className="block py-2">
+              <time className="text-gray-400 text-xs font-medium dark:text-gray-600">
+                {dayjs(date).format('YYYY-MM-DD')}
+              </time>
+              <h3 className="text-sm text-black font-bold truncate dark:text-white">{title}</h3>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

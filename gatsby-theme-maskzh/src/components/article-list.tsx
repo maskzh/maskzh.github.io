@@ -6,7 +6,7 @@ export default function ArticleList({ articles }) {
   const [text, setText] = useState('');
 
   return (
-    <div>
+    <div className="px-2">
       <div className="p-4">
         <Search text={text} setText={setText} />
       </div>
