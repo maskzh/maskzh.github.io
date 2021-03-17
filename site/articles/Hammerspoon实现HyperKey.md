@@ -2,7 +2,7 @@
 title: Hammerspoon 实现 HyperKey
 created: '2020-11-19'
 modified: '2020-11-19'
-tags: [Tech/Mac]
+tags: [Tech/Tools]
 ---
 
 一直在使用 [Karabiner-Elements](https://karabiner-elements.pqrs.org/) 的 HyperKey 的功能（将 cmd + option + control + shirft 绑定到 caplock）。

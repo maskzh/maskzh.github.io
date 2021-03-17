@@ -2,7 +2,7 @@
 title: Charles 抓包 iOS App
 created: '2020-07-19'
 modified: '2020-07-19'
-tags: [Tech/Charles]
+tags: [Tech/Tools]
 ---
 
 1. 将 iOS 设备和你电脑连接到同一个 Wi-Fi 下。

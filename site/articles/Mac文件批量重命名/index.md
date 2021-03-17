@@ -2,7 +2,7 @@
 title: Mac 文件批量重命名
 created: '2020-03-26'
 modified: '2020-03-26'
-tags: [Tech/Mac]
+tags: [Tech/Tools]
 ---
 
 Mac 已经自带了文件批量重命名的功能。但只支持 Index、Counter、Date 三种模式。

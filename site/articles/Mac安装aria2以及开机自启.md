@@ -2,7 +2,7 @@
 title: Mac 安装 aria2 以及开机自启
 created: '2020-03-28'
 modified: '2020-03-28'
-tags: [Tech/Mac]
+tags: [Tech/Tools]
 ---
 
 首先要安装 [Homebrew](https://brew.sh/) 。

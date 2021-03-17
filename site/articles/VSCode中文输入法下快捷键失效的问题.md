@@ -2,7 +2,7 @@
 title: VS Code 中文输入法下快捷键失效的问题
 created: '2020-03-13'
 modified: '2020-03-13'
-tags: [Tech/VSCode]
+tags: [Tech/Tools]
 ---
 
 使用 `VS Code` 经常会使用 `Ctrl + '` 来打开终端，但是发现在中文输入法下，这个快捷键会失效，同时 `VS Code`的空白页上`Toggle Terminal` 后的快捷键也显示为空。

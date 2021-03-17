@@ -2,7 +2,7 @@
 title: 终极 Shell - oh my zsh
 created: '2020-07-21'
 modified: '2020-07-21'
-tags: [Tech/ZSH]
+tags: [Tech/Tools]
 ---
 
 提升你使用 Shell 的体验和效率，让人爱上使用 Shell。

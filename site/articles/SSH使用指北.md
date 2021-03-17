@@ -2,7 +2,7 @@
 title: SSH 使用指北
 created: '2020-07-19'
 modified: '2020-07-19'
-tags: [Tech/SSH]
+tags: [Tech/Tools]
 ---
 
 ### 使用密钥对登录
