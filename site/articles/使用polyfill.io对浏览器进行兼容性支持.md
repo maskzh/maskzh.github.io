@@ -2,7 +2,7 @@
 title: 使用 polyfill.io 对浏览器进行兼容性支持
 created: '2021-01-25'
 modified: '2021-01-25'
-tags: [Tech/HTML]
+tags: [Tech/Web]
 ---
 
 尝试了 [react-app-polyfill](https://github.com/facebook/create-react-app/blob/master/packages/react-app-polyfill/README.md) 等方式，发现仍然无法很好解决兼容性的问题，而且可配置性也不够，一些 API 也没有支持。
