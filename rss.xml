@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ZYC's Blog]]></title><description><![CDATA[郑洋葱的博客]]></description><link>https://zyc.life</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 18 Mar 2021 03:12:38 GMT</lastBuildDate><item><title><![CDATA[Goodbye reach-router]]></title><description><![CDATA[在reach-router彻底死掉之前，记录一下它存在过。reach-router的作者是Ryan Florence，他同时也是react-router的作者之一。 19年作者表示reach-router将会在reach-router中新生（React Training: The…]]></description><link>https://zyc.life/Goodbye-reach-router/</link><guid isPermaLink="false">https://zyc.life/Goodbye-reach-router/</guid><content:encoded>&lt;p&gt;在&lt;a href=&quot;https://github.com/reach/router&quot;&gt;reach-router&lt;/a&gt;彻底死掉之前，记录一下它存在过。&lt;a href=&quot;https://github.com/reach/router&quot;&gt;reach-router&lt;/a&gt;的作者是&lt;a href=&quot;https://twitter.com/ryanflorence&quot;&gt;Ryan Florence&lt;/a&gt;，他同时也是&lt;a href=&quot;https://github.com/ReactTraining/react-router&quot;&gt;react-router&lt;/a&gt;的作者之一。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ZYC's Blog]]></title><description><![CDATA[郑洋葱的博客]]></description><link>https://zyc.life</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Nov 2022 15:42:05 GMT</lastBuildDate><item><title><![CDATA[Goodbye reach-router]]></title><description><![CDATA[在reach-router彻底死掉之前，记录一下它存在过。reach-router的作者是Ryan Florence，他同时也是react-router的作者之一。 19年作者表示reach-router将会在reach-router中新生（React Training: The…]]></description><link>https://zyc.life/Goodbye-reach-router/</link><guid isPermaLink="false">https://zyc.life/Goodbye-reach-router/</guid><content:encoded>&lt;p&gt;在&lt;a href=&quot;https://github.com/reach/router&quot;&gt;reach-router&lt;/a&gt;彻底死掉之前，记录一下它存在过。&lt;a href=&quot;https://github.com/reach/router&quot;&gt;reach-router&lt;/a&gt;的作者是&lt;a href=&quot;https://twitter.com/ryanflorence&quot;&gt;Ryan Florence&lt;/a&gt;，他同时也是&lt;a href=&quot;https://github.com/ReactTraining/react-router&quot;&gt;react-router&lt;/a&gt;的作者之一。&lt;/p&gt;
 &lt;p&gt;19年作者表示reach-router将会在reach-router中新生（&lt;a href=&quot;https://reacttraining.com/blog/reach-react-router-future&quot;&gt;React Training: The Future of React Router and @reach/router&lt;/a&gt;）。&lt;/p&gt;
 &lt;p&gt;现在回头一看，原来react-router 5.x早在两年前就发布了。这两年我一直有在使用 reach-router，因为它功能够用、表达简洁。&lt;/p&gt;
 &lt;p&gt;对比react-router和reach-router Router的写法。&lt;/p&gt;
@@ -77,7 +77,7 @@
 &lt;p&gt;思路是这样的，提交代码后，同时推送代码到 Github 和 Gitee，DroneCI 响应 Github 的 Webhook 开始工作，通过自定义 clone 行为，拉取 Gitee 的代码而不是 GitHub 的代码，进行后续的任务。&lt;/p&gt;
 &lt;p&gt;同步推送代码到多个代码仓库有多种方式，无感且不需要额外代码推荐下面这种方式。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; origin git@gitee.com:org/repo.git
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote set-url --add --push git@github.com:org/repo.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote set-url &lt;span class=&quot;token parameter variable&quot;&gt;--add&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--push&lt;/span&gt; git@github.com:org/repo.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;通过&lt;code&gt;git remote -v&lt;/code&gt;，会得到&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;origin	git@gitee.com:org/repo.git (fetch)
 origin	git@gitee.com:org/repo.git (push)
@@ -112,10 +112,10 @@ origin	git@github.com:org/repo.git (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 截取部分的配置文件
 env:
   - name: DRONE_BUILD_NUMBER
-    value: &amp;#39;${DRONE_BUILD_NUMBER}&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    value: &apos;${DRONE_BUILD_NUMBER}&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;然后通过 &lt;code&gt;envsubst&lt;/code&gt;，就可以将变量注入文件中。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;DRONE_BUILD_NUMBER&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${DRONE_BUILD_NUMBER}&lt;/span&gt;
-envsubst &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; deployment.yaml &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; kubectl apply -f -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+envsubst &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; deployment.yaml &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; kubectl apply &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; 使用非常简单，而且 Linux 系统中通常也自带这个小程序，不需要额外安装。&lt;/p&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
@@ -133,11 +133,11 @@ envsubst &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; depl
 &lt;p&gt;但更新到 &lt;code&gt;Big sur&lt;/code&gt; 后发现 HyperKey 不能用。而且到目前为止也没有等到更新，于是开始寻找替代方案。&lt;/p&gt;
 &lt;p&gt;最终选择 &lt;a href=&quot;https://www.hammerspoon.org/&quot;&gt;Hammerspoon&lt;/a&gt; + &lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2450/_index.html&quot;&gt;hidutil&lt;/a&gt; 。通过 Hammerspoon 实现快捷键的绑定，然后使用 hidutil 将 &lt;code&gt;caplock&lt;/code&gt; 改为 HyperKey。&lt;/p&gt;
 &lt;p&gt;Hammerspoon 的安装见 &lt;a href=&quot;https://www.hammerspoon.org/go/&quot;&gt;Getting Started with Hammerspoon&lt;/a&gt;。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --cask hammerspoon&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--cask&lt;/span&gt; hammerspoon&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;建立 Hammerspoon 的配置文件。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p ~/.hammerspoon
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; ~/.hammerspoon
 &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/.hammerspoon
-&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -O https://github.com/evantravers/hammerspoon-config/blob/38a7d8c0ad2190d1563d681725628e4399dcbe6c/hyper.lua
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-O&lt;/span&gt; https://github.com/evantravers/hammerspoon-config/blob/38a7d8c0ad2190d1563d681725628e4399dcbe6c/hyper.lua
 &lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; init.lua&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;HyperKey 的实现参考了 &lt;a href=&quot;https://github.com/evantravers/hammerspoon-config/blob/38a7d8c0ad2190d1563d681725628e4399dcbe6c/hyper.lua&quot;&gt;evantravers/hammerspoon-config/hyper.lua&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;这里使用 &lt;code&gt;F19&lt;/code&gt; 作为 HyperKey，同时也支持将 &lt;code&gt;F19&lt;/code&gt; 映射为 &lt;code&gt;cmd + alt + shift + ctrl&lt;/code&gt;。大多数软件的快捷键绑定中是无法直接 &lt;code&gt;F19&lt;/code&gt; 的，所以你可以使用 &lt;code&gt;cmd + alt + shift + ctrl&lt;/code&gt; 来替代。&lt;/p&gt;
@@ -165,7 +165,7 @@ hyper&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span clas
 &lt;li&gt;通过 &lt;code&gt;F19 + shift + r&lt;/code&gt;，刷新 Hammerspoon 的配置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;使用 hidutil 将 &lt;code&gt;caplock&lt;/code&gt; 改为 &lt;code&gt;F19&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;hidutil property --set &lt;span class=&quot;token string&quot;&gt;&apos;{&quot;UserKeyMapping&quot;:[{&quot;HIDKeyboardModifierMappingSrc&quot;:0x700000039,&quot;HIDKeyboardModifierMappingDst&quot;:0x70000006E}]}&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;hidutil property &lt;span class=&quot;token parameter variable&quot;&gt;--set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;{&quot;UserKeyMapping&quot;:[{&quot;HIDKeyboardModifierMappingSrc&quot;:0x700000039,&quot;HIDKeyboardModifierMappingDst&quot;:0x70000006E}]}&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;到此就实现了 &lt;code&gt;caplock&lt;/code&gt; 作为 HyperKey 了。&lt;/p&gt;
 &lt;p&gt;由于 Mac 重启后，hidutil 的改键会失效，所以还需要将 hidutil 的改键的代码写成 shell 脚本，并设置为可执行，然后通过「设置 - 用户和用户组 - 登录项」将脚本添加进来。&lt;/p&gt;
 &lt;p&gt;也可以在 &lt;code&gt;~/Library/LaunchAgents&lt;/code&gt; 中增加一个 &lt;code&gt;plist&lt;/code&gt;，作为开机即执行的 &lt;code&gt;service&lt;/code&gt;。&lt;/p&gt;
@@ -189,7 +189,7 @@ hyper&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span clas
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://evantravers.com/articles/2020/06/08/hammerspoon-a-better-better-hyper-key/&quot;&gt;Hammerspoon: A Better, Better Hyper Key&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Linux 设置时区（含构建镜像时设置时区）]]></title><description><![CDATA[CentOS 和 Ubuntu 的时区是 /etc/localtime。可以通过ll /etc/localtime来查看。 之前都是通过 来修改系统时区。 但 CentOS 7 之后，/etc/localtime 文件变成了一个链接，所以直接使用cp…]]></description><link>https://zyc.life/Linux设置时区/</link><guid isPermaLink="false">https://zyc.life/Linux设置时区/</guid><content:encoded>&lt;p&gt;CentOS 和 Ubuntu 的时区是 &lt;code&gt;/etc/localtime&lt;/code&gt;。可以通过&lt;code&gt;ll /etc/localtime&lt;/code&gt;来查看。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;lrwxrwxrwx 1 root root 33 May 18 14:40 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;lrwxrwxrwx 1 root root 33 May 18 14:40 /etc/localtime -&gt; /usr/share/zoneinfo/Asia/Shanghai&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;之前都是通过&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /usr/share/zoneinfo/Asia/Shanghai /etc/localtime&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;来修改系统时区。&lt;/p&gt;
@@ -199,18 +199,18 @@ hyper&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span clas
 timedatectl set-timezone Asia/Shanghai &lt;span class=&quot;token comment&quot;&gt;# 设置时区&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;主机上可以通过上述方法来修改，容器该如果修改呢？&lt;/p&gt;
 &lt;p&gt;Debian 系的系统内置了&lt;code&gt;tzdata&lt;/code&gt;。在 &lt;code&gt;Dockerfile&lt;/code&gt; 中声明&lt;code&gt;TZ&lt;/code&gt;环境变量即可。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; TZ=Asia/Shanghai&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; TZ=Asia/Shanghai&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Alpine 系的系统没有内置&lt;code&gt;tzdata&lt;/code&gt;，所以还需要安装&lt;code&gt;tzdata&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; TZ=Asia/Shanghai
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; TZ=Asia/Shanghai&lt;/span&gt;
 
-&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; apk update \\
+&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; apk update \&lt;span class=&quot;token operator&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
     &amp;amp;&amp;amp; apk add tzdata \\
-    &amp;amp;&amp;amp; echo &lt;span class=&quot;token string&quot;&gt;&quot;${TZ}&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt; /etc/timezone \\
-    &amp;amp;&amp;amp; ln &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;sf /usr/share/zoneinfo/$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;TZ&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; /etc/localtime \\
+    &amp;amp;&amp;amp; echo &quot;${TZ}&quot; &gt; /etc/timezone \\
+    &amp;amp;&amp;amp; ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \\
     &amp;amp;&amp;amp; rm /var/cache/apk/*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Linux 设置 UTF-8 环境]]></title><description><![CDATA[原文链接 Linux 下经常会有无法显示中文，无法显示非 ASCII 字符等情况。将系统的语言编码设置为 UTF-8 可以解决这些语言和显示的问题。 Locales: 安装 看最后一行，如果它的开头是ii，说明locales已经安装。如果不是，你需要在 root…]]></description><link>https://zyc.life/Linux设置UTF-8环境/</link><guid isPermaLink="false">https://zyc.life/Linux设置UTF-8环境/</guid><content:encoded>&lt;p&gt;&lt;a href=&quot;https://perlgeek.de/en/article/set-up-a-clean-utf8-environment&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Linux 下经常会有无法显示中文，无法显示非 ASCII 字符等情况。将系统的语言编码设置为 UTF-8 可以解决这些语言和显示的问题。&lt;/p&gt;
 &lt;h3&gt;Locales: 安装&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ dpkg -l locales
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ dpkg &lt;span class=&quot;token parameter variable&quot;&gt;-l&lt;/span&gt; locales
 &lt;span class=&quot;token assign-left variable&quot;&gt;Desired&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Unknown/Install/Remove/Purge/Hold
 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;/ Err?&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;none&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;/Reinst-required &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Status,Err: &lt;span class=&quot;token assign-left variable&quot;&gt;uppercase&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;bad&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -235,18 +235,18 @@ ii  locales        &lt;span class=&quot;token number&quot;&gt;2.31&lt;/span&gt;-
 &lt;p&gt;输入&lt;code&gt;locale&lt;/code&gt;，你会看到输出。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8
-LC_CTYPE=&amp;quot;en_US.UTF-8&amp;quot;
-LC_NUMERIC=&amp;quot;en_US.UTF-8&amp;quot;
-LC_TIME=&amp;quot;en_US.UTF-8&amp;quot;
-LC_COLLATE=&amp;quot;en_US.UTF-8&amp;quot;
-LC_MONETARY=&amp;quot;en_US.UTF-8&amp;quot;
-LC_MESSAGES=&amp;quot;en_US.UTF-8&amp;quot;
-LC_PAPER=&amp;quot;en_US.UTF-8&amp;quot;
-LC_NAME=&amp;quot;en_US.UTF-8&amp;quot;
-LC_ADDRESS=&amp;quot;en_US.UTF-8&amp;quot;
-LC_TELEPHONE=&amp;quot;en_US.UTF-8&amp;quot;
-LC_MEASUREMENT=&amp;quot;en_US.UTF-8&amp;quot;
-LC_IDENTIFICATION=&amp;quot;en_US.UTF-8&amp;quot;
+LC_CTYPE=&quot;en_US.UTF-8&quot;
+LC_NUMERIC=&quot;en_US.UTF-8&quot;
+LC_TIME=&quot;en_US.UTF-8&quot;
+LC_COLLATE=&quot;en_US.UTF-8&quot;
+LC_MONETARY=&quot;en_US.UTF-8&quot;
+LC_MESSAGES=&quot;en_US.UTF-8&quot;
+LC_PAPER=&quot;en_US.UTF-8&quot;
+LC_NAME=&quot;en_US.UTF-8&quot;
+LC_ADDRESS=&quot;en_US.UTF-8&quot;
+LC_TELEPHONE=&quot;en_US.UTF-8&quot;
+LC_MEASUREMENT=&quot;en_US.UTF-8&quot;
+LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;
 LC_ALL=en_US.UTF-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;至此就完成了语言编码的设置了。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Dockerfile 中 ENTRYPOINT 与 CMD 的区别]]></title><description><![CDATA[两条指令的区别是指定的命令是否在 shell 中被调用。 ENTRYPOINT ["node", "app.js"]，exec 形式 ENTRYPOINT node app.js，shell 形式 如果使用 exec 形式的 ENTRYPOINT…]]></description><link>https://zyc.life/Dockerfile中ENTRYPOINT与CMD的区别/</link><guid isPermaLink="false">https://zyc.life/Dockerfile中ENTRYPOINT与CMD的区别/</guid><content:encoded>&lt;p&gt;两条指令的区别是指定的命令是否在 shell 中被调用。&lt;/p&gt;
 &lt;ol&gt;
@@ -254,14 +254,14 @@ LC_ALL=en_US.UTF-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;code&gt;ENTRYPOINT node app.js&lt;/code&gt;，shell 形式&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;如果使用 exec 形式的 ENTRYPOINT 指令：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;node&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;app.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt; [&lt;span class=&quot;token string&quot;&gt;&quot;node&quot;&lt;/span&gt;, &lt;span class=&quot;token string&quot;&gt;&quot;app.js&quot;&lt;/span&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;可以从容器中的运行进程列表看出：这里是直接运行 node 进程，而并非在 shell 中执行。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ docker exec 4675d ps x
 	PID TTY     STAT TIME COMMAND
 	1   ?       Ssl  0:00 node app.js
 	2   ?       Rs   0:00 ps x&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;如果采用 shell 形式的指令：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt; node app.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;docker&quot;&gt;&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt; node app.js&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;则进程列表是这样：&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ docker exec 4675d ps x
 	PID TTY     STAT TIME COMMAND
@@ -285,14 +285,14 @@ LC_ALL=en_US.UTF-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;接下来安装 &lt;code&gt;oh my zsh&lt;/code&gt;，安装&lt;code&gt;oh my zsh&lt;/code&gt;时，会提示让你将 &lt;code&gt;zsh&lt;/code&gt;设置为默认的 Shell，所以上面步骤 3 可以跳过。&lt;/p&gt;
 &lt;h3&gt;安装 oh my zsh&lt;/h3&gt;
 &lt;p&gt;安装&lt;code&gt;oh my zsh&lt;/code&gt;，除了需要先 &lt;code&gt;zsh&lt;/code&gt; 之外，还需要 &lt;code&gt;git&lt;/code&gt;和&lt;code&gt;curl&lt;/code&gt;，但这个一般系统都是自带的，如果提示不支持的命令，那么你需要&lt;code&gt;sudo apt install git curl&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;运行上述命令即可安装。&lt;/p&gt;
 &lt;h3&gt;必备的主题和插件&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/romkatv/powerlevel10k#oh-my-zsh&quot;&gt;powerlevel10k&lt;/a&gt;
 powerlevel10k 是一款 zsh 的主题，它强调速度、灵活性和开箱即用的体验。对比 &lt;code&gt;oh my zsh&lt;/code&gt;自带的主题，启动速度提升非常明显，强烈安利。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone --depth&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; https://github.com/romkatv/powerlevel10k.git &lt;span class=&quot;token variable&quot;&gt;${ZSH_CUSTOM&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;$HOME&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;custom}&lt;/span&gt;/themes/powerlevel10k&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone &lt;span class=&quot;token parameter variable&quot;&gt;--depth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; https://github.com/romkatv/powerlevel10k.git &lt;span class=&quot;token variable&quot;&gt;${ZSH_CUSTOM&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;$HOME&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;custom}&lt;/span&gt;/themes/powerlevel10k&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;然后在&lt;code&gt;.zshrc&lt;/code&gt;中设置 &lt;code&gt;ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;&lt;/code&gt;。&lt;/p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;z，自带
@@ -323,10 +323,10 @@ zsh-autosuggestions，会记忆你执行过的命令，当你输入之前执行�
 &lt;p&gt;Enjoy！&lt;/p&gt;
 &lt;h3&gt;一键脚本&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 安装 oh-my-zsh&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt; -c &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;# 安装 powerlevel10k&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone --depth&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; https://github.com/romkatv/powerlevel10k.git &lt;span class=&quot;token variable&quot;&gt;${ZSH_CUSTOM&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;$HOME&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;custom}&lt;/span&gt;/themes/powerlevel10k
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone &lt;span class=&quot;token parameter variable&quot;&gt;--depth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; https://github.com/romkatv/powerlevel10k.git &lt;span class=&quot;token variable&quot;&gt;${ZSH_CUSTOM&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;$HOME&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;custom}&lt;/span&gt;/themes/powerlevel10k
 
 &lt;span class=&quot;token comment&quot;&gt;# 安装 zsh-autosuggestions&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/zsh-users/zsh-autosuggestions &lt;span class=&quot;token variable&quot;&gt;${ZSH_CUSTOM&lt;span class=&quot;token operator&quot;&gt;:-&lt;/span&gt;~&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;custom}&lt;/span&gt;/plugins/zsh-autosuggestions
@@ -357,7 +357,7 @@ zsh-autosuggestions，会记忆你执行过的命令，当你输入之前执行�
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[SSH 使用指北]]></title><description><![CDATA[使用密钥对登录 通过 ssh 登录 VPS 的方式，就两种方式，密码或者密钥。通常我们都会关闭密码登录，因为不够安全，而且经常要输入密码，麻烦。相反，使用密钥，则更便捷也更安全。 是时候使用 Ed25519 算法来生成密钥对了，相对 RSA…]]></description><link>https://zyc.life/SSH使用指北/</link><guid isPermaLink="false">https://zyc.life/SSH使用指北/</guid><content:encoded>&lt;h3&gt;使用密钥对登录&lt;/h3&gt;
 &lt;p&gt;通过 &lt;code&gt;ssh&lt;/code&gt; 登录 VPS 的方式，就两种方式，密码或者密钥。通常我们都会关闭密码登录，因为不够安全，而且经常要输入密码，麻烦。相反，使用密钥，则更便捷也更安全。&lt;/p&gt;
 &lt;p&gt;是时候使用 &lt;code&gt;Ed25519&lt;/code&gt; 算法来生成密钥对了，相对 &lt;code&gt;RSA&lt;/code&gt; 更短、更安全且加密解密速度也更快。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssh-keygen -o -a &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt; -t ed25519 -f ~/.ssh/id_ed25519 -C &lt;span class=&quot;token string&quot;&gt;&quot;name@example.com&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssh-keygen &lt;span class=&quot;token parameter variable&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; ~/.ssh/id_ed25519 &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;name@example.com&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;然后将密钥添加到 SSH Agent。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssh-add ~/.ssh/id_ed25519&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;将公钥&lt;code&gt;id_ed25519.pub&lt;/code&gt; 的内容填入 VPS 的 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; 文件，然后不需要密码你就可以 &lt;code&gt;ssh&lt;/code&gt; 上你的 VPS 了。&lt;/p&gt;
@@ -401,14 +401,14 @@ Host pi
 &lt;/ol&gt;
 &lt;p&gt;其中 2、3、4 都需要登录小程序管理后台，因此对于独立主体申请的小程序，不可避免需要索取权限，而第三方平台在授权后则不需要。&lt;/p&gt;
 &lt;p&gt;总结：这个方案更灵活简单一些。可以不通过开放平台（第三方平台）来实现。但不太适合大批量的部署。优点是能适应多客户，多域名，更灵活的定制的需求。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[如何使用 youtube-dl 下载高质量的视频]]></title><description><![CDATA[如下的命令，可以列出视频支持下载的格式： 通常会有一个best标签，它包含了视频和音频，但往往质量和清晰度不够高。而质量和清晰度高的格式，视频和音频是分离的。 因此需要通过ffmpeg来将视频和音频合成在一起，以获取最终高质量的视频。 需要安装ffmpeg…]]></description><link>https://zyc.life/如何使用youtube-dl下载高质量的视频/</link><guid isPermaLink="false">https://zyc.life/如何使用youtube-dl下载高质量的视频/</guid><content:encoded>&lt;p&gt;如下的命令，可以列出视频支持下载的格式：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;youtube-dl -F url&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;youtube-dl &lt;span class=&quot;token parameter variable&quot;&gt;-F&lt;/span&gt; url&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;通常会有一个&lt;code&gt;best&lt;/code&gt;标签，它包含了视频和音频，但往往质量和清晰度不够高。而质量和清晰度高的格式，视频和音频是分离的。&lt;/p&gt;
 &lt;p&gt;因此需要通过&lt;code&gt;ffmpeg&lt;/code&gt;来将视频和音频合成在一起，以获取最终高质量的视频。&lt;/p&gt;
 &lt;p&gt;需要安装&lt;code&gt;ffmpeg&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ffmpeg &lt;span class=&quot;token comment&quot;&gt;# ubuntu&lt;/span&gt;
 brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ffmpeg &lt;span class=&quot;token comment&quot;&gt;# mac&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;然后执行&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;youtube-dl -f bestvideo+bestaudio url&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;youtube-dl &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; bestvideo+bestaudio url&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;youtube-dl&lt;/code&gt; 会下载视频和音频，并通过 &lt;code&gt;ffmpeg&lt;/code&gt; 将它们合成在一个文件中。Enjoy！&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mac 安装 aria2 以及开机自启]]></title><description><![CDATA[首先要安装 Homebrew 。 1、安装 aria2 2、配置 aria2 建议的配置文件如下： 3、开机自启 新增一个文件/usr/local/opt/aria2/homebrew.mxcl.aria2.plist，/usr/local/opt/aria2是brew…]]></description><link>https://zyc.life/Mac安装aria2以及开机自启/</link><guid isPermaLink="false">https://zyc.life/Mac安装aria2以及开机自启/</guid><content:encoded>&lt;p&gt;首先要安装 &lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;1、安装 aria2&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;brew install aria2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -466,7 +466,7 @@ event-poll=kqueue
 ### 进度保存相关 ##
 
 # 从会话文件中读取下载任务
-# 开启该参数后 aria2 将只接受 session 中的任务, 这意味着 aria2 一旦使用 conf 后将不再接受来自终端的任务, 所以该条只需要在启动rpc时加上就可以了，引用自 &amp;lt;https://github.com/fsaimon/aria2.conf/blob/c4ff2f297b13e54e16952f83c423b0f1e656600c/aria2.conf#L37&amp;gt;
+# 开启该参数后 aria2 将只接受 session 中的任务, 这意味着 aria2 一旦使用 conf 后将不再接受来自终端的任务, 所以该条只需要在启动rpc时加上就可以了，引用自 &amp;lt;https://github.com/fsaimon/aria2.conf/blob/c4ff2f297b13e54e16952f83c423b0f1e656600c/aria2.conf#L37&gt;
 input-file=/Users/xxx/.aria2/aria2.session
 
 # 在Aria2退出时保存`错误/未完成`的下载任务到会话文件
@@ -589,32 +589,32 @@ bt-save-metadata=true
 # on-download-complete=/Users/zyc/.aria2/delete_aria2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;3、开机自启&lt;/p&gt;
 &lt;p&gt;新增一个文件&lt;code&gt;/usr/local/opt/aria2/homebrew.mxcl.aria2.plist&lt;/code&gt;，&lt;code&gt;/usr/local/opt/aria2&lt;/code&gt;是&lt;code&gt;brew&lt;/code&gt;安装&lt;code&gt;aria2&lt;/code&gt;的目录，放下该目录下，&lt;code&gt;brew&lt;/code&gt;就会将它识别出来。文件内容如下&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
-&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;&amp;lt;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;gt;&amp;quot;&amp;gt;
-&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
-  &amp;lt;dict&amp;gt;
-    &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;homebrew.mxcl.aria2&amp;lt;/string&amp;gt;
-    &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
-    &amp;lt;array&amp;gt;
-      &amp;lt;string&amp;gt;/usr/local/bin/aria2c&amp;lt;/string&amp;gt;
-      &amp;lt;string&amp;gt;--conf-path=/Users/xxx/.aria2/aria2.conf&amp;lt;/string&amp;gt;
-    &amp;lt;/array&amp;gt;
-    &amp;lt;key&amp;gt;KeepAlive&amp;lt;/key&amp;gt;
-    &amp;lt;dict&amp;gt;
-      &amp;lt;key&amp;gt;Crashed&amp;lt;/key&amp;gt;
-      &amp;lt;true/&amp;gt;
-      &amp;lt;key&amp;gt;SuccessfulExit&amp;lt;/key&amp;gt;
-      &amp;lt;false/&amp;gt;
-    &amp;lt;/dict&amp;gt;
-    &amp;lt;key&amp;gt;ProcessType&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;Background&amp;lt;/string&amp;gt;
-    &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;/usr/local/var/log/aria2.log&amp;lt;/string&amp;gt;
-    &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;/usr/local/var/log/aria2.log&amp;lt;/string&amp;gt;
-  &amp;lt;/dict&amp;gt;
-&amp;lt;/plist&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&amp;lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;&amp;lt;http://www.apple.com/DTDs/PropertyList-1.0.dtd&gt;&quot;&gt;
+&amp;lt;plist version=&quot;1.0&quot;&gt;
+  &amp;lt;dict&gt;
+    &amp;lt;key&gt;Label&amp;lt;/key&gt;
+    &amp;lt;string&gt;homebrew.mxcl.aria2&amp;lt;/string&gt;
+    &amp;lt;key&gt;ProgramArguments&amp;lt;/key&gt;
+    &amp;lt;array&gt;
+      &amp;lt;string&gt;/usr/local/bin/aria2c&amp;lt;/string&gt;
+      &amp;lt;string&gt;--conf-path=/Users/xxx/.aria2/aria2.conf&amp;lt;/string&gt;
+    &amp;lt;/array&gt;
+    &amp;lt;key&gt;KeepAlive&amp;lt;/key&gt;
+    &amp;lt;dict&gt;
+      &amp;lt;key&gt;Crashed&amp;lt;/key&gt;
+      &amp;lt;true/&gt;
+      &amp;lt;key&gt;SuccessfulExit&amp;lt;/key&gt;
+      &amp;lt;false/&gt;
+    &amp;lt;/dict&gt;
+    &amp;lt;key&gt;ProcessType&amp;lt;/key&gt;
+    &amp;lt;string&gt;Background&amp;lt;/string&gt;
+    &amp;lt;key&gt;StandardErrorPath&amp;lt;/key&gt;
+    &amp;lt;string&gt;/usr/local/var/log/aria2.log&amp;lt;/string&gt;
+    &amp;lt;key&gt;StandardOutPath&amp;lt;/key&gt;
+    &amp;lt;string&gt;/usr/local/var/log/aria2.log&amp;lt;/string&gt;
+  &amp;lt;/dict&gt;
+&amp;lt;/plist&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;使用 &lt;code&gt;brew services&lt;/code&gt; 来管理它。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;brew services start aria2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;现在 &lt;code&gt;aria2&lt;/code&gt;可以开机自启了。你可以 &lt;code&gt;brew services list&lt;/code&gt; 查看它的运行状态。&lt;/p&gt;
@@ -639,7 +639,7 @@ ps：因为使用 RPC 的方式，所以 &lt;code&gt;aria2&lt;/code&gt; 不会�
 &lt;p&gt;脚本的代码如下：&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$@&lt;/span&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
-	&lt;span class=&quot;token assign-left variable&quot;&gt;md5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;/usr/local/bin/md5sum $file &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cut&lt;/span&gt; -d &lt;span class=&quot;token string&quot;&gt;&apos; &apos;&lt;/span&gt; -f1&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token assign-left variable&quot;&gt;md5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;/usr/local/bin/md5sum $file &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos; &apos;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f1&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
   	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${md5}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
     	&lt;span class=&quot;token builtin class-name&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;113&lt;/span&gt;
   	&lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;
@@ -705,12 +705,12 @@ ps：因为使用 RPC 的方式，所以 &lt;code&gt;aria2&lt;/code&gt; 不会�
 &lt;p&gt;如此这样配置，前端和后端可在同一个域下访问。能满足单机的部署，对于简单项目已经可用了。&lt;/p&gt;
 &lt;p&gt;现实后端的部署肯定是更加灵活的，集群、容器等等。例如可能会将服务暴露在&lt;code&gt;api.example.com&lt;/code&gt;，与前端项目在不同的二级域名下，所以会遇到跨域的问题。&lt;/p&gt;
 &lt;p&gt;给 api 的 location 增加跨域的配置。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; $http_origin always;
-add_header &amp;#39;Access-Control-Allow-Methods&amp;#39; &amp;#39;GET, POST, OPTIONS, PATCH, DELETE&amp;#39; always;
-add_header &amp;#39;Access-Control-Allow-Headers&amp;#39; &amp;#39;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&amp;#39; always;
-add_header &amp;#39;Access-Control-Expose-Headers&amp;#39; &amp;#39;Content-Length,Content-Range&amp;#39; always;
-add_header &amp;#39;Access-Control-Allow-Credentials&amp;#39; true always;
-if ($request_method = &amp;#39;OPTIONS&amp;#39;) {
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;add_header &apos;Access-Control-Allow-Origin&apos; $http_origin always;
+add_header &apos;Access-Control-Allow-Methods&apos; &apos;GET, POST, OPTIONS, PATCH, DELETE&apos; always;
+add_header &apos;Access-Control-Allow-Headers&apos; &apos;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&apos; always;
+add_header &apos;Access-Control-Expose-Headers&apos; &apos;Content-Length,Content-Range&apos; always;
+add_header &apos;Access-Control-Allow-Credentials&apos; true always;
+if ($request_method = &apos;OPTIONS&apos;) {
   return 204;
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;如果有携带 &lt;code&gt;cookie&lt;/code&gt; 跨域的需求，&lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt;是不可设置为&lt;code&gt;*&lt;/code&gt;的，所以这里使用了 &lt;code&gt;$http_origin&lt;/code&gt;，但这里的配置只作为参考，请自行做白名单的处理。&lt;/p&gt;
